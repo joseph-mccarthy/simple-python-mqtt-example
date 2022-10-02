@@ -1,1 +1,1 @@
-# Simple Python MTQQ Example
+# Simple Python MQTT Example
