@@ -4,7 +4,7 @@ I'm starting to use Raspberry Pi for a lot of simple tasks around the home and g
 
 ## Brokers
 
-In order to publish and subscribe to messages you'll require a broker. The code examples are currently set to use a free example from HiveMQ. If you are going to use HiveMQ free public broker __please remember that it's public and don't share sensitive information__. I'm personally using [__Mosquitto__](https://github.com/eclipse/mosquitto) as my broker on the network, running on a Raspberry Pi (Obviously).
+In order to publish and subscribe to messages you'll require a broker. [__HiveMQ__](http://www.mqtt-dashboard.com/) has a free open MQTT broker that you could use. If you are going to use HiveMQ free public broker __please remember that it's public and don't share sensitive information__. I'm personally using [__Mosquitto__](https://github.com/eclipse/mosquitto) as my broker on the network, running on a Raspberry Pi (Obviously).
 
 ### Installing Mosquitto (Raspberry Pi)
 
@@ -14,7 +14,21 @@ Mosquitto is already avaliable in the standard distribution so it's just a case 
 sudo apt-get install mosquitto
 ```
 
-This will default to always be running using port __1883__. That's all the set up that I needed to get this demo working, although the [__documentation__](https://mosquitto.org/documentation/) is great for Mosquitto.
+This will default to always be running using port __1883__. That's all the set up that I needed to get this demo working, although the [__documentation__](https://mosquitto.org/documentation/) is great for Mosquitto. Note that this will also only allow for localhost connections. If you want to allow for remote connections then do the following:
+
+```bash
+sudo nano /etc/mosquitto/mosquitto.conf
+```
+
+Then add the following two lines at the bottom of the file
+
+```bash
+listner 1883
+allow_anonymous true
+```
+
+Note that this is not a secure implmentation and should not be used in production.
+
 
 ## Licence
 
