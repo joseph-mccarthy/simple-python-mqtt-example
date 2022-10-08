@@ -1,5 +1,12 @@
 # Simple Python MQTT Example
 
+<div align="center">
+  
+  [![GitHub](https://img.shields.io/github/license/joseph-mccarthy/simple-python-mqtt-example?style=for-the-badge)](https://github.com/joseph-mccarthy/simple-python-mqtt-example/blob/main/licence)
+  [![wakatime](https://wakatime.com/badge/github/joseph-mccarthy/simple-python-mqtt-example.svg?style=for-the-badge)](https://wakatime.com/badge/github/joseph-mccarthy/simple-python-mqtt-example)
+
+</div>
+
 I'm starting to use Raspberry Pi for a lot of simple tasks around the home and give me notfications. So I thought it was about time to look into message brokers and __MQTT__ is the way to go. So instead of just throwing the implmentation into a project of mine. I thought it would be more useful to create a seriously simple example project that just publishes a random number to a topic and another that subscribes to it. The two files __publish.py__ and __subscribe.py__ are both heavily commented with what basically each line is doing. So it's simple to follow.
 
 ## Brokers
